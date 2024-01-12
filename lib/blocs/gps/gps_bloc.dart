@@ -63,7 +63,7 @@ class GpsBloc extends Bloc<GpsEvent, GpsState> {
 
       add(GpsAndPermissionEvent(
           isGpsEnable: isEnable,
-          isGpsPermissionGranted: state.isGpsPermissionGranted));
+          isGpsPermissionGranted: state.isGpsPermissionGranted)); //el estado que este actualmente
     });
     return isEnable;
   }

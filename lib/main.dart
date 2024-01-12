@@ -4,8 +4,10 @@ import 'package:maps_app/blocs/blocs.dart';
 import 'package:maps_app/screens/loading_screen.dart';
 
 void main() {
-  runApp(MultiBlocProvider(providers: [
-    BlocProvider(create: (contex) => GpsBloc()) //creo una instancia en mi contexto de gpsblock
+  runApp(MultiBlocProvider(providers: [ //permite tener multiples blocks unicializados.
+        BlocProvider(create: (contex) => GpsBloc()), //creo una instancia en mi contexto de gpsblock
+        BlocProvider(create: (contex) => LocationBloc()),
+        BlocProvider(create: (contex) => MapBloc()),
   ], 
   child: const MyApp(),
   )

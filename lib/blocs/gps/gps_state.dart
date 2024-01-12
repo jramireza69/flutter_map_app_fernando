@@ -23,4 +23,9 @@ class GpsState extends Equatable {
               isGpsPermissionGranted ?? this.isGpsPermissionGranted);
   @override
   List<Object> get props => [isGpsEnable, isGpsPermissionGranted];
+
+  //@override
+   //escribo metodo para mostrar por pantalla lo tengo simplificado....
+  // String toString() => '{isGpsEnable: $isGpsEnable , isGpsPermissionGranted: $isGpsPermissionGranted }';
+  
 }
