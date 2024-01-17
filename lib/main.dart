@@ -7,7 +7,7 @@ void main() {
   runApp(MultiBlocProvider(providers: [ //permite tener multiples blocks unicializados.
         BlocProvider(create: (contex) => GpsBloc()), //creo una instancia en mi contexto de gpsblock
         BlocProvider(create: (contex) => LocationBloc()),
-        BlocProvider(create: (contex) => MapBloc()),
+        BlocProvider(create: (contex) => MapBloc(locationBloc: BlocProvider.of<LocationBloc>(contex))),
   ], 
   child: const MyApp(),
   )
